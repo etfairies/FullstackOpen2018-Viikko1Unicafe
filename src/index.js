@@ -23,28 +23,23 @@ const Statistics = (props) => {
     }
     
     return (
-        <div>
-            <Statistic nimi="hyvä" arvo={props.hyva}/>
-            <Statistic nimi="neutraali" arvo={props.neutraali}/>
-            <Statistic nimi="huono" arvo={props.huono}/>
-            <Statistic nimi="keskiarvo" arvo={keskiarvo}/>
-            <Statistic nimi="positiivisia" arvo={positiivisia}/>
-        </div>
+        <table>
+            <Statistic nimi="hyvä" arvo={props.hyva} merkki=""/>
+            <Statistic nimi="neutraali" arvo={props.neutraali} merkki=""/>
+            <Statistic nimi="huono" arvo={props.huono} merkki=""/>
+            <Statistic nimi="keskiarvo" arvo={keskiarvo.toFixed(1)} merkki=""/>
+            <Statistic nimi="positiivisia" arvo={positiivisia.toFixed(1)} merkki="%"/>
+        </table>
     )
 }
 
 const Statistic = (props) => {
-    if (props.nimi === "positiivisia") {
-        return (
-            <div>
-                <p>{props.nimi} {props.arvo} %</p>
-            </div>
-        )
-    }
     return (
-        <div>
-            <p>{props.nimi} {props.arvo}</p>
-        </div>
+        <tr>
+            <td>{props.nimi}</td>
+            <td>{props.arvo}</td>
+            <td>{props.merkki}</td>
+        </tr>
     )
 }
 
