@@ -1,2 +1,2 @@
 # FullstackOpen2018-Viikko1Unicafe
-Viikon 1 tehtävät 1.6-1.9
+Viikon 1 tehtävät 1.6-1.9 ja 1.11
